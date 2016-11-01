@@ -18,15 +18,19 @@
     2014/10/20 Ver 1.0.0 Release
 */
 /// <reference path="C:/Users/RUI/OneDrive/lib/aftereffects.d.ts/ae.d.ts"/>
-(function () {
-    var EMPTY_DISK_CACHE = 10200;
-    var CAN_RUN_VERSION = 12.0;
-    var runAEVersionCheck = function (version) {
-        return (parseFloat(app.version) < version);
-    };
-    if (!runAEVersionCheck(CAN_RUN_VERSION)) {
-        return 0;
-    }
-    app.executeCommand(EMPTY_DISK_CACHE);
+
+(function() {
+  const EMPTY_DISK_CACHE:number = 10200;
+  const CAN_RUN_VERSION:number = 12.0;
+
+  const runAEVersionCheck = function(version:number) {
+    return (parseFloat(app.version) < version);
+  }
+
+  if(!runAEVersionCheck(CAN_RUN_VERSION)){
     return 0;
+  }
+
+  app.executeCommand(EMPTY_DISK_CACHE);
+  return 0;
 }).call(this);
