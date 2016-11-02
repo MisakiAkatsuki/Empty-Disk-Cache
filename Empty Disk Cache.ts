@@ -22,15 +22,15 @@
 */
 /// <reference path="C:/Users/RUI/OneDrive/lib/aftereffects.d.ts/ae.d.ts"/>
 
-(function() {
-  const EMPTY_DISK_CACHE:number = 10200;
-  const CAN_RUN_VERSION:number = 12.0;
+(function () {
+  const EMPTY_DISK_CACHE: number = 10200;
+  const CAN_RUN_VERSION: number = 12.0;
 
-  const runAEVersionCheck = function(version:number) {
+  const runAEVersionCheck = function (version: number): boolean {
     return (parseFloat(app.version) < version);
   }
 
-  if(!runAEVersionCheck(CAN_RUN_VERSION)){
+  if (!runAEVersionCheck(CAN_RUN_VERSION)) {
     return 0;
   }
 
